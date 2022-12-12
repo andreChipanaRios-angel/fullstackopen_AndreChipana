@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 
 
-const Header = (props) =>{
+/*const Header = (props) =>{
   return(<div>
     <h1>{props.course}</h1>
   </div>)
@@ -28,21 +28,23 @@ const Total = (props) =>{
       number of exercises {props.sumExercises}
     </p>
   </div>)
-}
-  const App = () => {
-  const part1 = 'Fundamentals of React'
-  const part2 = 'Using props to pass data'
-  const part3 = 'State of a component'
-  
-  const exercises1 = 10
-  const exercises2 = 7
-  const exercises3 = 14
-
-  const course  = 'Half Stack application development'
-
-  const sumExercises=exercises1+exercises2+exercises3
+}*/
+const App = () => {
+  const course = 'Half Stack application development'
+  const part1 = {
+    name: 'Fundamentals of React',
+    exercises: 10
+  }
+  const part2 = {
+    name: 'Using props to pass data',
+    exercises: 7
+  }
+  const part3 = {
+    name: 'State of a component',
+    exercises: 14
+  }
   return (
-    <>
+    /*<>
       <Header course = {course}/> 
       <Content 
       part1={part1} 
@@ -54,7 +56,20 @@ const Total = (props) =>{
       exercises3={exercises3}
       />
       <Total sumExercises={sumExercises}/>
+    </>*/
+    <>
+      <h1>{course}</h1>
+      <p>
+        {part1.name} {part1.exercises}
+      </p>
+      <p>
+        {part2.name} {part2.exercises}
+      </p>
+      <p>
+        {part3.name} {part3.exercises}
+      </p>
     </>
+
   )
 }
 
